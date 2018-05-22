@@ -47,3 +47,82 @@
 .bypostauthor {
 	display: block;
 }
+
+/*styling of the header*/
+
+#masthead.site-header{
+	border-bottom: 1px solid #e1e1e1;
+	position: fixed;
+	width: 100%;
+	background-color: hsla(0,0%,100%,.85);
+	z-index: 1;
+	height: 60px;
+	display: flex;
+	align-items: center;
+}
+
+.site-title {
+	background: url("../../images/logos/inhabitent-logo-tent.svg") no-repeat;
+}
+
+/*nav bar in the header*/
+
+.fieldset{
+	display: flex;
+	flex-direction: row;
+	width: 50%;
+	border: none;
+	label{
+		width: 50px;
+		display: none;
+	}
+	.search-submit{
+		border: none;
+		background: transparent;
+		box-shadow: none;
+		order: -1;
+		outline: none;
+	}
+}
+
+input.search-field{
+	border: none;
+}
+#site-navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+}
+
+/*styling of the footer*/
+footer{
+	background: url("../../images/backgrounds/dark-wood.png");
+	color: white;
+	.site-info{
+	display: flex;
+	flex-direction: column;}
+}
+.footer-top{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	margin: 40px 0px;
+	h3{
+		color: #d99054;
+	}
+	.contact{
+		width: 25%;
+		padding-left: 5px;
+	}
+	.hours{
+		width: 25%;
+	}
+	.footer-logo-container{
+		width: 50%;
+		display: flex;
+	}
+}
+.footer-bottom{
+	width: 100%;
+	text-align: center;
+}
