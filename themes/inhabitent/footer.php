@@ -36,7 +36,7 @@
 						</div>
 						<div class="footer-logo-container">
 							<a href="<?php get_home_url();?>">
-								<img src="<?php get_template_directory_uri();?>/images/logos/inhabitent-logo-text.svg" alt="inhabitent logo">
+								<img src="<?php echo get_template_directory_uri();?>/images/logos/inhabitent-logo-text.svg" alt="inhabitent logo">
 							</a>
 						</div>
 					</div>
