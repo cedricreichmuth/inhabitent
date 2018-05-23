@@ -11,10 +11,14 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<header class="page-header">
+				<h1><?php the_archive_title();?></h1>
 				<?php $terms = get_terms(array(
 					'taxonomy' => 'product_type',
 					'hide-empty' => false
 				));?>
+				<?php foreach($terms as $term) : ?>
+					<h2><?php echo $term->name;?></h2>
+				<?php endforeach;?>
 			</header>
 
 			<?php while ( have_posts() ) : the_post(); ?>

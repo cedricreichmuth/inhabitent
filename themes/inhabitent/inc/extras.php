@@ -107,3 +107,16 @@ function front_hero_background_set(){
 	wp_add_inline_style('inhabitent-style', $front_hero_css);
 }
 add_action('wp_enqueue_scripts', 'front_hero_background_set');
+
+/**
+* Change titles for archive-product.php & taxonomy-product_type.php
+*/
+function title_change_shop($title){
+	if(is_post_type_archive('products')){
+		$title = 'SHOP STUFF';
+	}elseif(is_tax('product_type')){
+		$title = single_term_title();
+	}
+	return $title;
+}
+add_filter('get_the_archive_title', 'title_change_shop');
