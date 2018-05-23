@@ -22,7 +22,9 @@
 
 			<header id="masthead" class="site-header" role="banner">
 				<div class="site-branding">
-					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+						<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+					</a>
 				</div><!-- .site-branding -->
 				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>

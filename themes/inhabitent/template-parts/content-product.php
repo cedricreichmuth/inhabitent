@@ -19,6 +19,10 @@
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+
+<!-- custom field suite-->
+  <?php echo CFS()->get( 'price' ); ?>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">

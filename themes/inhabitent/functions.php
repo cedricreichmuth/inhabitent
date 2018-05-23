@@ -70,22 +70,22 @@ add_action( 'widgets_init', 'red_starter_widgets_init' );
 /**
  * Filter the stylesheet_uri to output the minified CSS file.
  */
-function red_starter_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
+function inhabitent_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 	if ( file_exists( get_template_directory() . '/build/css/style.min.css' ) ) {
 		$stylesheet_uri = $stylesheet_dir_uri . '/build/css/style.min.css';
 	}
 
 	return $stylesheet_uri;
 }
-add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
+add_filter( 'stylesheet_uri', 'inhabitent_minified_css', 10, 2 );
 
 /**
  * Enqueue scripts and styles.
  */
-function red_starter_scripts() {
-	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
+function inhabitent_scripts() {
+	wp_enqueue_style( 'inhabitent-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
+	wp_enqueue_script( 'inhabitent-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
 	wp_enqueue_style('font-awesome', 'https://use.fontawesome.com/releases/v5.0.13/css/all.css');
 
@@ -93,7 +93,7 @@ function red_starter_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
+add_action( 'wp_enqueue_scripts', 'inhabitent_scripts' );
 
 function cc_mime_types($mimes) {
  $mimes['svg'] = 'image/svg+xml';

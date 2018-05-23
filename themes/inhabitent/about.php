@@ -9,14 +9,21 @@
 
 get_header(); ?>
 
-	<div id="primary" class="about-content-area">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<header class="entry-header">
+				<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+			</header><!-- .entry-header -->
+			<div class="entry-content">
+				<h2><?php $props = CFS()->get_field_info( 'about' );
+				echo $props['label'];?></h2>
+				<?php echo CFS()->get( 'about' ); ?>
+				<h2><?php $props = CFS()->get_field_info( 'about_team' );
+				echo $props['label'];?></h2>
+				<?php echo CFS()->get( 'about_team' ); ?>
 
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
-
-			<?php endwhile; // End of the loop. ?>
+			</div><!-- .entry-content -->
+		</article><!-- #post-## -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

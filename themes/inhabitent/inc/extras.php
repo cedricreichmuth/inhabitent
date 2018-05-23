@@ -59,3 +59,51 @@ function login_logo_title(){
 	return 'Inhabitent';
 }
 add_filter('login_headertitle', 'login_logo_title');
+
+/**
+* Make About Hero customizable through CFS field
+*/
+function hero_background_set(){
+	if(! is_page_template('about.php')){
+		return;}
+	$hero_url = CFS()->get( 'about_hero' );
+	if(! $hero_url){
+		return;
+	}
+	$hero_css = ".page-template-about .entry-header{
+		background-image: url($hero_url);
+		background-size: cover, cover;
+		height: 100vh;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+		font-size: 30px;
+	}";
+	wp_add_inline_style('inhabitent-style', $hero_css);
+}
+add_action('wp_enqueue_scripts', 'hero_background_set');
+
+/**
+* Make Front Page Hero customizable through CFS field
+*/
+function front_hero_background_set(){
+	if(! is_page_template('front-page.php')){
+		return;}
+	$front_hero_url = CFS()->get( 'front_page_hero' );
+	if(! $front_hero_url){
+		return;
+	}
+	$front_hero_css = ".page-template-front-page .entry-header{
+		background-image: url($front_hero_url);
+		background-size: cover, cover;
+		height: 100vh;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+		font-size: 30px;
+	}";
+	wp_add_inline_style('inhabitent-style', $front_hero_css);
+}
+add_action('wp_enqueue_scripts', 'front_hero_background_set');

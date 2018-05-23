@@ -62,7 +62,16 @@
 }
 
 .site-title {
-	background: url("../../images/logos/inhabitent-logo-tent.svg") no-repeat;
+	background: url(../../images/logos/inhabitent-logo-tent.svg) no-repeat;
+	background-size: 50px 33px;
+	z-index: 2;
+	text-indent: 100%;
+	overflow: hidden;
+	width: 50px;
+	height: 33px;
+	a{
+		@extend .site-title ;
+	}
 }
 
 /*nav bar in the header*/
