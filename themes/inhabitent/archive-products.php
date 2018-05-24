@@ -17,7 +17,9 @@ get_header(); ?>
 					'hide-empty' => false
 				));?>
 				<?php foreach($terms as $term) : ?>
-					<h2><?php echo $term->name;?></h2>
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>/product_type/<?php echo $term->slug;?>/">
+						<h2><?php echo $term->name;?></h2>
+					</a>
 				<?php endforeach;?>
 			</header>
 

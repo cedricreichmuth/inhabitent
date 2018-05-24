@@ -17,6 +17,7 @@ get_header(); ?>
 			</header><!-- .entry-header -->
 
 			<div class="products-preview"><!-- prodcuts preview-->
+				<h2>SHOP STUFF</h2>
 				<?php
 					$terms = get_terms( array(
 				    'taxonomy' => 'product_type',
@@ -28,7 +29,9 @@ get_header(); ?>
 						<img src="<?php echo get_template_directory_uri(); ?>/images/icons/<?php echo $term->slug;?>.svg">
 					</div>
 					<p><?php echo $term->description;?></p>
-					<button><?php echo strtoupper($term->slug);?> STUFF</button>
+					<a href="<?php echo get_permalink();?>/product_type/<?php echo $term->slug;?>/">
+						<button><?php echo strtoupper($term->slug);?> STUFF</button>
+					</a>
 				</div>
 				<?php endforeach;?>
 			</div>
@@ -48,6 +51,26 @@ get_header(); ?>
 						</a>
 						<a href="<?php the_permalink();?>">
 							<div class="read-entry">Read Entry</div>
+						</a>
+					</div>
+				<?php endforeach; wp_reset_postdata(); ?>
+			<?php endif; ?>
+
+			<div class="adventures-preview"><!-- adventures preview-->
+				<h1>LATEST ADVENTURES</h1>
+				<?php
+   			$args = array( 'post_type' => 'adventures', 'posts_per_page' => 4 );
+				$adventure_preview_posts = get_posts( $args );
+				if( ! empty($adventure_preview_posts)) :
+			 	foreach ( $adventure_preview_posts as $post ) : setup_postdata( $post );?>
+
+					<div class="adventure-preview-post">
+						<div class="adventure-preview-image"><?php the_post_thumbnail( 'thumbnail' ); ?></div>
+						<a href="<?php the_permalink();?>">
+							<h2 class="adventure-preview-title"><?php the_title();?></h2>
+						</a>
+						<a href="<?php the_permalink();?>">
+							<div class="read-entry">Read More</div>
 						</a>
 					</div>
 				<?php endforeach; wp_reset_postdata(); ?>
