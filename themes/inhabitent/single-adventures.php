@@ -1,8 +1,8 @@
 <?php
 /**
- * The template for displaying all single products.
+ * The template for displaying all single adventures.
  *
- * @package RED_Starter_Theme
+ * @package Inhabitent Theme
  */
 
 get_header(); ?>
@@ -13,10 +13,9 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<div class="product-image-container"><?php the_post_thumbnail( 'large' ); ?></div>
-				<div class="product-content-container">
+				<div class="adventure-image-container"><?php the_post_thumbnail( 'large' ); ?></div>
+				<div class="adventure-content-container">
 					<h1><?php echo the_title();?></h1>
-					<span><?php echo CFS()->get( 'price' ); ?></span>
 					<?php the_content(); ?>
 					<?php
 						wp_link_pages( array(

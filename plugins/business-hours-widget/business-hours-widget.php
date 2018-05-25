@@ -159,7 +159,6 @@ class business_hours extends WP_Widget {
 		$monday_friday = strip_tags( $instance['monday_friday'] );
 		$saturday = strip_tags( $instance['saturday'] );
 		$sunday = strip_tags( $instance['sunday'] );
-		// TODO: Store the rest of values of the widget in their own variables
 
 		// Display the admin form
 		include( plugin_dir_path( __FILE__ ) . 'views/admin.php' );
@@ -168,7 +167,6 @@ class business_hours extends WP_Widget {
 
 } // end class
 
-// TODO: Remember to change 'Widget_Name' to match the class name definition
 add_action( 'widgets_init', function(){
      register_widget( 'business_hours' );
 });
