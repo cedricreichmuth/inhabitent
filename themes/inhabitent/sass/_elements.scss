@@ -68,3 +68,44 @@ table {
 	margin: 0 0 $base__space-unit;
 	width: 100%;
 }
+.green-button{
+	display: inline;
+	background: #248a83;
+	border: none;
+	font-family: 'Novecento Sans Web';
+	font-style: normal;
+	font-weight: normal;
+	border-radius: 0px;
+	color: white;
+	font-size: .9rem;
+	line-height: 1;
+	padding: .75rem 1.5rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-shadow: none;
+	box-shadow: none;
+	&:hover{
+		background: #1a6d68;
+	}
+	p{
+		margin: 0px;
+	}
+}
+.white-button{
+	background: transparent;
+	border: 1px solid white;
+	@extend .green-button ;
+	&:hover{
+		border: none;
+	}
+}
+.black-button{
+	background: white;
+	border: 1px solid black;
+	color: black;
+	@extend .green-button ;
+	&:hover{
+		border: none;
+		color: white;
+	}
+}

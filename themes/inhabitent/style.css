@@ -285,7 +285,11 @@ textarea {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-  clear: both; }
+  clear: both;
+  font-family: "Novecento Sans Web";
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase; }
 
 /* Copy */
 p {
@@ -388,6 +392,42 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
+.green-button, .white-button, .black-button {
+  display: inline;
+  background: #248a83;
+  border: none;
+  font-family: 'Novecento Sans Web';
+  font-style: normal;
+  font-weight: normal;
+  border-radius: 0px;
+  color: white;
+  font-size: .9rem;
+  line-height: 1;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .green-button:hover, .white-button:hover, .black-button:hover {
+    background: #1a6d68; }
+  .green-button p, .white-button p, .black-button p {
+    margin: 0px; }
+
+.white-button {
+  background: transparent;
+  border: 1px solid white; }
+  .white-button:hover {
+    border: none; }
+
+.black-button {
+  background: white;
+  border: 1px solid black;
+  color: black; }
+  .black-button:hover {
+    border: none;
+    color: white; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -460,11 +500,10 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: royalblue; }
-  a:visited {
-    color: purple; }
+  color: #248A83;
+  text-decoration: none; }
   a:hover, a:focus, a:active {
-    color: midnightblue; }
+    color: #2f1339; }
   a:focus {
     outline: thin dotted; }
   a:hover, a:active {
@@ -918,7 +957,7 @@ object {
 /* Front page */
 /*products preview*/
 .products-preview {
-  margin: 40px 40px;
+  margin: 40px 140px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 25% 75%;
@@ -940,6 +979,8 @@ object {
     border-top-width: 5px;
     text-align: center;
     padding: 10px; }
+    .products-preview .products-preview-do:hover, .products-preview .products-preview-eat:hover, .products-preview .products-preview-sleep:hover, .products-preview .products-preview-wear:hover {
+      border-color: #d99054; }
   .products-preview .products-preview-eat {
     grid-row: 2/2;
     grid-column: 2/3; }
@@ -952,40 +993,15 @@ object {
   .products-preview img {
     height: 70px;
     width: 70px; }
-  .products-preview button {
-    background: #248a83;
-    border: none;
-    font-family: 'Novecento Sans Web';
-    font-style: normal;
-    font-weight: normal;
-    border-radius: 0px;
-    color: white;
-    font-size: .9rem;
-    line-height: 1;
-    padding: .75rem 1.5rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-shadow: none;
-    -webkit-box-shadow: none;
-            box-shadow: none; }
-  .products-preview button:hover {
-    background: #1a6d68; }
-
-.products-preview-wear:hover {
-  border-color: #d99054; }
-
-.products-preview-do:hover, .products-preview .products-preview-eat:hover, .products-preview .products-preview-sleep:hover, .products-preview .products-preview-wear:hover {
-  border-color: #d99054; }
-
-.products-preview-sleep:hover {
-  border-color: #d99054; }
-
-.products-preview-eat:hover {
-  border-color: #d99054; }
+  .products-preview .green-button, .products-preview .white-button, .products-preview .black-button {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-bottom: 10px; }
 
 /*journal preview*/
 .journal-preview {
-  margin: 40px 40px;
+  margin: 40px 140px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 25% 75%;
@@ -1003,12 +1019,88 @@ object {
   .journal-preview .journal-preview-post {
     border: 1px solid #e1e1e1; }
     .journal-preview .journal-preview-post h2 {
-      margin: none !important; }
+      margin: 0px; }
   .journal-preview img {
     max-height: 240px;
     border-bottom: 3px solid #e1e1e1; }
   .journal-preview .content-wrapper {
-    padding: 10px; }
+    border: 15px solid white; }
+    .journal-preview .content-wrapper p {
+      margin: 0px;
+      font-size: 12px; }
+    .journal-preview .content-wrapper h2 {
+      line-height: 1.25;
+      letter-spacing: 2px;
+      font-size: 1.3em; }
+    .journal-preview .content-wrapper .black-button {
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      margin-top: 13px; }
+
+.adventures-preview-continer {
+  margin: 40px 140px; }
+  .adventures-preview-continer h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    color: #2f1339;
+    margin-top: 70px;
+    margin-bottom: 50px; }
+
+.adventures-preview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 265px);
+  grid-gap: 20px 20px;
+  margin-bottom: 40px; }
+  .adventures-preview .Star-Gazing, .adventures-preview .Taking, .adventures-preview .A {
+    grid-column: 4/5;
+    grid-row: 2/3; }
+    .adventures-preview .Star-Gazing h3, .adventures-preview .Taking h3, .adventures-preview .A h3 {
+      font-size: 26px;
+      margin: 0px;
+      color: white;
+      font-family: "Merriweather";
+      font-weight: 400;
+      padding: 50px 24px 24px 24px;
+      text-transform: none;
+      line-height: 1.25; }
+    .adventures-preview .Star-Gazing .adventure-preview-image, .adventures-preview .Taking .adventure-preview-image, .adventures-preview .A .adventure-preview-image {
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      bottom: 0; }
+    .adventures-preview .Star-Gazing .white-button, .adventures-preview .Taking .white-button, .adventures-preview .A .white-button {
+      margin-left: 24px; }
+  .adventures-preview .Taking {
+    grid-column: 3/4;
+    grid-row: 2/3; }
+  .adventures-preview .A {
+    grid-column: 3/5;
+    grid-row: 1/2; }
+    .adventures-preview .A h3 {
+      font-size: 38px; }
+  .adventures-preview .Getting {
+    grid-column: 1/3;
+    grid-row: 1/3; }
+    .adventures-preview .Getting h3 {
+      font-size: 48px;
+      margin: 0px;
+      color: white;
+      font-family: "Merriweather";
+      font-weight: 400;
+      padding-top: 24px;
+      text-transform: none;
+      padding: 50px 24px 24px 24px;
+      line-height: 1.25; }
+    .adventures-preview .Getting .adventure-preview-image {
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+    .adventures-preview .Getting .white-button {
+      margin-left: 24px; }
 
 /*about page*/
 .page-template #masthead {

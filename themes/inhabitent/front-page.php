@@ -30,7 +30,7 @@ get_header(); ?>
 					</div>
 					<p><?php echo $term->description;?></p>
 					<a href="<?php echo get_permalink();?>/product_type/<?php echo $term->slug;?>/">
-						<button><?php echo strtoupper($term->slug);?> STUFF</button>
+						<div class="green-button"><?php echo strtoupper($term->slug);?> STUFF</div>
 					</a>
 				</div>
 				<?php endforeach;?>
@@ -52,7 +52,7 @@ get_header(); ?>
 								<h2 class="journal-preview-title"><?php the_title();?></h2>
 							</a>
 							<a href="<?php the_permalink();?>">
-								<div class="read-entry">Read Entry</div>
+								<div class="black-button">Read Entry</div>
 							</a>
 						</div>
 					</div>
@@ -60,32 +60,31 @@ get_header(); ?>
 			<?php endif; ?>
 			</div>
 
-			<div class="adventures-preview"><!-- adventures preview-->
-				<h1>LATEST ADVENTURES</h1>
+			<div class="adventures-preview-continer"><!-- adventures preview-->
+				<h2>LATEST ADVENTURES</h2>
+				<div class="adventures-preview">
 				<?php
    			$args = array( 'post_type' => 'adventures', 'posts_per_page' => 4 );
 				$adventure_preview_posts = get_posts( $args );
 				if( ! empty($adventure_preview_posts)) :
 			 	foreach ( $adventure_preview_posts as $post ) : setup_postdata( $post );?>
-
-					<div class="adventure-preview-post">
-						<div class="adventure-preview-image"><?php the_post_thumbnail( 'thumbnail' ); ?></div>
+					<div class="<?php the_title();?>">
+						<div class="adventure-preview-image" style="background-image: url('<?php the_post_thumbnail_url( 'large' ); ?>');">
 						<a href="<?php the_permalink();?>">
-							<h2 class="adventure-preview-title"><?php the_title();?></h2>
+							<h3 class="adventure-preview-title"><?php the_title();?></h3>
 						</a>
 						<a href="<?php the_permalink();?>">
-							<div class="read-entry">Read More</div>
+							<div class="white-button">Read More</div>
 						</a>
+						</div>
 					</div>
-				<?php endforeach; wp_reset_postdata(); ?>
-			<?php endif; ?>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>/adventures/">
-				<div class="more-adventures">
-					<p class="more-adventures">More Adventures</p>
+					<?php endforeach; wp_reset_postdata(); ?>
+					<?php endif; ?>
 				</div>
-			</a>
-		</div>
-
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>/adventures/">
+					<div class="green-button">More Adventures</div>
+				</a>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
