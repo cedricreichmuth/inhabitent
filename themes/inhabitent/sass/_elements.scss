@@ -68,6 +68,167 @@ table {
 	margin: 0 0 $base__space-unit;
 	width: 100%;
 }
+
+/*styling of the header*/
+
+#masthead.site-header{
+	border-bottom: 1px solid #e1e1e1;
+	position: fixed;
+	width: 100%;
+	font-family: 'Novecento Sans Web';
+	font-weight: normal;
+	font-style: normal;
+	text-transform: uppercase;
+	background-color: hsla(0,0%,100%,.85);
+	z-index: 1;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.header-container{
+	width: 1120px;
+	display: flex;
+	height: 60px;
+	align-items: center;
+}
+
+.site-title {
+	background: url(../../images/logos/inhabitent-logo-tent.svg) no-repeat;
+	background-size: 50px 33px;
+	z-index: 2;
+	text-indent: 100%;
+	overflow: hidden;
+	width: 50px;
+	height: 33px;
+	a{
+		@extend .site-title ;
+	}
+}
+
+/*nav bar in the header*/
+
+.fieldset{
+	display: flex;
+	border: none;
+	label{
+		input{
+			background-color: transparent;
+			color: white;
+			border: none;
+			outline: none;
+			width: 0px;
+		}
+	}
+	.search-submit{
+		border: none;
+		background: transparent;
+		box-shadow: none;
+		order: -1;
+		outline: none;
+		padding-top: 3px;
+		padding-right: 40px;
+		:hover{
+			color: #f0e4d1
+		}
+	}
+}
+::placeholder{
+	color: #808080;
+}
+#site-navigation {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+}
+.menu-menu-1-container{
+	li{
+		padding-right: 14px;
+	}
+}
+
+/*styling of the footer*/
+.site-footer{
+	background: url("../../images/backgrounds/dark-wood.png");
+	color: white;
+	.site-info{
+	display: flex;
+	flex-direction: column;}
+	.footer-top{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		margin: 50px 0px;
+		h2{
+			color: #d99054;
+			font-size: 19px;
+			padding: 0px;
+			margin: 0px;
+		}
+		a{
+			color: white;
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		i{
+			padding-right: 10px;
+			font-size: 20px;
+		}
+		.widget-area{
+			display: flex;
+			width: 50%;
+			justify-content: space-around;
+			margin: 0px;
+			padding: 0px;
+		}
+		.footer-logo-container{
+			width: 50%;
+			padding-right: 40px;
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-end;
+			a{
+				width: 50%;
+			}
+			img{
+				width: 100%;
+			}
+		}
+		aside{
+			padding-bottom: 0px;
+			margin-bottom: 0px;
+			p{
+				@extend aside ;
+			}
+		}
+	}
+	.footer-bottom{
+		width: 100%;
+		text-align: center;
+		font-family: "Novecento Sans Web";
+		font-style: normal;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+}
+
+/*sidebar*/
+#secondary{
+	i{
+		padding-right: 10px;
+	}
+	.widget_archive{
+		ul{
+			list-style: none;
+			margin-left: 0;
+			padding-left: 0;
+		}
+	}
+}
+
+/*buttons*/
 .green-button{
 	display: inline;
 	background: #248a83;

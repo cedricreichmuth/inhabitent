@@ -36,7 +36,7 @@ function inhabitent_setup() {
 	) );
 
 }
-endif; // red_starter_setup
+endif; // inhabitent_setup
 add_action( 'after_setup_theme', 'inhabitent_setup' );
 
 /**
@@ -45,7 +45,7 @@ add_action( 'after_setup_theme', 'inhabitent_setup' );
  * @global int $content_width
  */
 function inhabitent_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'red_starter_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'inhabitent_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'inhabitent_content_width', 0 );
 

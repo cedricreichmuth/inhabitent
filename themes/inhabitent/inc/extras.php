@@ -71,7 +71,7 @@ function hero_background_set(){
 		return;
 	}
 	$hero_css = ".page-template-about .entry-header{
-		background-image: url($hero_url);
+		background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url($hero_url);
 		background-size: cover, cover;
 		height: 100vh;
 		display: flex;
@@ -95,7 +95,7 @@ function front_hero_background_set(){
 		return;
 	}
 	$front_hero_css = ".page-template-front-page .entry-header{
-		background-image: url($front_hero_url);
+		background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url($front_hero_url);
 		background-size: cover, cover;
 		height: 100vh;
 		display: flex;

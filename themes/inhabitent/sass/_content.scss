@@ -48,90 +48,17 @@
 	display: block;
 }
 
-/*styling of the header*/
-
-#masthead.site-header{
-	border-bottom: 1px solid #e1e1e1;
-	position: fixed;
-	width: 100%;
-	font-family: 'Novecento Sans Web';
-	font-weight: normal;
-	font-style: normal;
-	text-transform: uppercase;
-	background-color: hsla(0,0%,100%,.85);
-	z-index: 1;
-	height: 60px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-.site-branding{
-	padding-left: 40px;
-}
-
-.site-title {
-	background: url(../../images/logos/inhabitent-logo-tent.svg) no-repeat;
-	background-size: 50px 33px;
-	z-index: 2;
-	text-indent: 100%;
-	overflow: hidden;
-	width: 50px;
-	height: 33px;
-	a{
-		@extend .site-title ;
-	}
-}
-
-/*nav bar in the header*/
-
-.fieldset{
-	display: flex;
-	border: none;
-	label{
-		width: 0px;
-		input{
-			background-color: transparent;
-			color: white;
-			border: none;
-			outline: none;
-		}
-	}
-	.search-submit{
-		border: none;
-		background: transparent;
-		box-shadow: none;
-		order: -1;
-		outline: none;
-		padding-top: 3px;
-		padding-right: 40px;
-		:hover{
-			color: #f0e4d1
-		}
-	}
-}
-::placeholder{
-	color: #f0e4d1;
-}
-#site-navigation {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-	align-items: center;
-}
-.menu-menu-1-container{
-	li{
-		padding-right: 14px;
-	}
-}
-
 /*Journal page*/
 
-.blog{
+.blog, .single-post, .category, .tag, .date, .search-results, .search-no-results, .error404, .post-type-archive-adventures{
+	.site-content{
+		justify-content: center;
+		display: flex;
+	}
   .flex-container{
-    display: flex;
-    margin-right: auto;
     width: 1120px;
+		display: flex;
+		flex-direction: row;
     padding-top: 60px;
   }
   #primary.content-area{
@@ -140,16 +67,22 @@
     padding-top: 5%;
     border-right: 1px solid #e1e1e1;
     margin-left: 5px;
+		margin-bottom: 70px;
   }
-  header.entry-header{
+	.widget-area{
+		padding-top: 30px;
+	}
+  .entry-header{
     position: relative;
     line-height: 1;
   }
-  .blog{
+	.blog, .single-post, .category, .tag, .search-results, .search-no-results, .error404, .post-type-archive-adventures{
+		.site-content{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-  }
+  	}
+	}
   .entry-header{
     display: grid;
     grid-template: repeat(10, 10%)/repeat(10, 10%);
@@ -163,17 +96,23 @@
     grid-row: 1/3;
     font-size: 2.3rem;
     background-color: #248a83;
+		font-family: "Novecento Sans Web";
+		font-style: normal;
+		font-weight: bold;
+		letter-spacing: 2px;
+		font-size: 34px;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+		line-height: 1.25;
     a{
       text-decoration: none;
       color: white;
     }
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
   }
   .entry-meta{
-    grid-column: 6/11;
+    grid-column: 5/11;
     grid-row: 10/10;
     display: flex;
     justify-content: center;
@@ -181,38 +120,478 @@
     color: white;
     padding: 0px 10px;
     border: 8px solid #248a83;
+		font-family: "Novecento Sans Web";
+		font-style: normal;
+		font-weight: normal;
+		text-transform: uppercase;
+		span time{
+			color: white;
+		}
+		a{
+			color: white;
+		}
   }
+	.black-btn{
+		@extend .black-button ;
+	}
+	.BodyA{
+		line-height: 1.75 !important;
+	}
 }
 
-/*styling of the footer*/
-.site-footer{
-	background: url("../../images/backgrounds/dark-wood.png");
-	color: white;
-	.site-info{
-	display: flex;
-	flex-direction: column;}
+/*category & tag archive*/
+.category, .tag, .date, .search-results{
+	.page-header{
+		padding-bottom: 16px;
+		margin-bottom: 50px;
+		border-bottom: 1px solid #e1e1e1;
+	}
+	.page-title{
+		font-size: 38px;
+		margin: 0px;
+	}
 }
-.footer-top{
-	width: 100%;
+
+/*single posts*/
+.single-post{
+	.entry-title{
+		color: white;
+	}
+	.entry-footer{
+		span{
+			font-family: "Novecento Sans Web";
+    	font-style: normal;
+    	font-weight: 300;
+			text-transform: uppercase;
+			padding-right: 20px;
+		}
+		.archive-links{
+			margin-bottom: 25px;
+		}
+		.social-buttons i{
+			padding-right: 8px;
+		}
+	}
+	/*comments section*/
+	.comments-title{
+		font-size: 34px;
+		color: #2f1339;
+	}
+	.comment-list{
+		margin: 0px;
+		padding: 0px;
+		#div-comment-2{
+			border: 0px;
+		}
+	}
+	.comment-body{
+		display: flex;
+		border-top: 1px solid #e1e1e1;
+		padding: 20px 0px;
+	}
+	.comment-author-avatar{
+		display: inline;
+		padding-right: 30px;
+	}
+	.avatar{
+		border-radius: 50%;
+	}
+	.comment-content{
+		display: inline;
+	}
+	.comment-author cite{
+		font-style: normal;
+		font-weight: bold;
+	}
+	time{
+		color: gray;
+	}
+	/*comment respond section*/
+	.comment-reply-title{
+		font-size: 29px;
+	}
+	.comment-form{
+		label{
+			font-family: "Novecento Sans Web";
+			font-style: normal;
+			font-weight: normal;
+			text-transform: uppercase;
+			color: #2f1339;
+			font-size: 17px;
+		}
+		textarea, input{
+			margin-top: 10px;
+			color: #666;
+	    background-color: #f4f4f4;
+	    border: 1px solid #e1e1e1;
+		}
+	}
+	.comment-form-author{
+		width: 49%;
+		padding-left: 1%;
+		display: inline-flex;
+		flex-direction: column;
+		label{
+			width: 100%;
+		}
+		input{
+			width: 100%;
+		}
+	}
+	.comment-form-email{
+		@extend .comment-form-author ;
+	}
+	.comment-form-url{
+		display: flex;
+		flex-direction: column;
+	}
+	.comment-form-cookies-consent{
+		display: flex;
+		flex-direction: column;
+	}
+	.form-submit input.submit{
+		@extend .green-button ;
+		background: #248a83;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    font-family: Novecento Sans Web,sans-serif;
+    font-size: 14.4px;
+    font-size: .9rem;
+    line-height: 1;
+    padding: .75rem 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+	}
+}
+
+/*shop page*/
+.post-type-archive-products{
+	.site-content{
+		display: flex;
+		justify-content: center;
+	}
+	.about-content-area{
+		padding-top: 60px;
+		width: 1120px;
+	}
+	.site-main{
+		width: 100%;
+	}
+	.page-header{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 20px 0px;
+		border-bottom: 1px dashed #c8c8c8;
+		width: 100%;
+		h1{
+			font-size: 39px;
+			margin: 0px;
+		}
+	}
+}
+.product-type-navigation{
 	display: flex;
 	flex-direction: row;
-	margin: 40px 0px;
-	h3{
-		color: #d99054;
-	}
-	.contact{
-		width: 25%;
-		padding-left: 5px;
-	}
-	.hours{
-		width: 25%;
-	}
-	.footer-logo-container{
-		width: 50%;
-		display: flex;
+	justify-content: center;
+	h2{
+		padding: 0px 25px;
+		font-size: 20px;
+		font-weight: normal;
 	}
 }
-.footer-bottom{
-	width: 100%;
-	text-align: center;
+.products-grid-container{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 20px;
+	padding-bottom: 90px;
+	padding-top: 50px;
+}
+.products{
+	border: 1px solid #e1e1e1;
+	img{
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+		border-bottom: 5px solid #e1e1e1;
+		}
+	.product-info{
+		display: flex;
+		flex-direction: row;
+		padding: 10px;
+		justify-content: space-between;
+		align-items: center;
+		p{
+			margin: 0px;
+			background-color: white;
+			display: inline;
+		}
+		span{
+			background-color: white;
+		}
+		p::before{
+			content: "............................................................";
+			width: 0;
+			white-space: nowrap;
+			float: left;
+			z-index: -1;
+			position: absolute;
+		}
+	}
+}
+.hentry{
+	margin: 0px;
+}
+
+/*product type shop page*/
+.tax-product_type{
+	.site-content{
+		display: flex;
+		justify-content: center;
+	}
+	.content-area{
+	padding-top: 60px;
+	width: 1120px;
+	}
+	.page-header{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 20px 0px;
+		border-bottom: 1px dashed #c8c8c8;
+		width: 100%;
+		h1{
+			font-size: 39px;
+			margin: 0px;
+		}
+	}
+}
+
+/*single products*/
+.single-products{
+	.site-main{
+		display: flex;
+		justify-content: center;
+		padding-top: 60px;
+		article{
+			width: 1120px;
+			display: flex;
+			justify-content: space-between;
+			padding: 50px 0px;
+			border: none;
+			margin-bottom: 100px;
+		}
+		.product-image-container{
+			width: 540px;
+			height: 300px;
+			img{
+				border: none;
+				object-fit: cover;
+				height: 300px;
+			}
+		}
+		.product-content-container{
+			width: 540px;
+			h1{
+				color: #d99054;
+				font-size: 38px;
+				margin: 0px;
+			}
+			.price{
+				font-family: "Novecento Sans Web";
+				font-style: normal;
+				font-weight: normal;
+				font-size: 29px;
+				margin: 0px;
+			}
+			span{
+				line-height: 1.75;
+			}
+			.social-buttons i{
+				padding-right: 10px;
+			}
+		}
+	}
+}
+/*find us page*/
+.page-template-default{
+	.site-content{
+		display: flex;
+		justify-content: center;
+	}
+	.flex-container{
+		width: 1120px;
+		display: flex;
+	}
+	.content-area{
+		width: 73%;
+		margin-top: 5%;
+		margin-right: 5%;
+	}
+	.widget-area{
+		padding-top: 5%;
+		margin-top: 60px;
+		border-left: 1px solid #e1e1e1;
+	}
+	.post-17{
+		margin-top: 60px;
+	}
+	.entry-title{
+		font-size: 38px;
+	}
+	iframe{
+		width: 760px;
+		height: 300px;
+	}
+	.entry-content h2{
+		font-size: 34px;
+		color: #2f1339;
+	}
+	.wpcf7-form{
+		label{
+			font-family: "Novecento Sans Web";
+			font-style: normal;
+			font-weight: normal;
+			text-transform: uppercase;
+			color: #2f1339;
+			font-size: 17px;
+			span{
+				color: #d99054;
+			}
+		}
+		textarea, input{
+			margin-top: 10px;
+			color: #666;
+			background-color: #f4f4f4;
+			border: 1px solid #e1e1e1;
+		}
+		.wpcf7-submit{
+			@extend .green-button ;
+			background: #248a83;
+	    border: none;
+	    border-radius: 0;
+	    color: #fff;
+	    cursor: pointer;
+	    font-family: Novecento Sans Web,sans-serif;
+	    font-size: 14.4px;
+	    font-size: .9rem;
+	    line-height: 1;
+	    padding: .75rem 1.5rem;
+	    text-decoration: none;
+	    text-transform: uppercase;
+		}
+	}
+}
+
+/*search results page*/
+.search-results{
+	article{
+		border: none;
+	}
+	.entry-header{
+		display: block;
+	}
+	.entry-title{
+		background: none;
+		justify-content: flex-start;
+		padding: 30px 0px 20px 0px;
+		a{
+			color: #248A83;
+			text-align: left;
+		}
+		p{
+			text-transform: none;
+		}
+	}
+}
+
+/*404 page*/
+.error404{
+	#primary.content-area{
+		padding-top: 0;
+	}
+	.page-title{
+		font-size: 38px;
+	}
+	h2{
+		color: #2f1339;
+	}
+	.error-404{
+		.search-submit{
+			display: none;
+		}
+		::placeholder{
+			color: #808080;
+			text-transform: lowercase;
+		}
+		.search-form.fieldset label{
+			width: 200px;
+			.search-field{
+				border: 1px solid #e1e1e1;
+				background-color: #f4f4f4;
+				width: 200px;
+			}
+		}
+	}
+	.widget ul{
+		list-style: none;
+		padding-left: 0px;
+		margin-left: 0px;
+	}
+}
+
+/*archive adventures*/
+.post-type-archive-adventures{
+	.about-content-area{
+		width: 100%;
+		.grid-container{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 1fr;
+			grid-gap: 20px 20px;
+			margin-bottom: 50px;
+		}
+		.page-header {
+			h1{
+				text-align: center;
+				font-size: 38px;
+			}
+			margin-bottom: 40px;
+			border-bottom: 1px dashed #c8c8c8;
+		}
+		.adventure-preview-image{
+			height: 550px;
+			width: 100%;
+			background-position: center;
+		}
+		h2{
+			font-family: "Merriweather";
+			font-style: normal;
+			font-weight: 400;
+			color: white;
+			margin-bottom: 50px;
+			font-size: 48px;
+			text-transform: none;
+			&:hover{
+				color: #f0e4d1;
+			}
+		}
+		.title-container{
+			padding: 50px 25px;
+		}
+	}
+}
+/*single adventures*/
+.single-adventures{
+	.adventure-content-container{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		h1, p, span{
+			width: 800px;
+			line-height: 1.75;
+		}
+	}
 }

@@ -3,10 +3,20 @@
 --------------------------------------------------------------*/
 
 /* Front page */
-
+.page-template{
+  .site-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .entry-header{
+    width: 100%;
+  }
+}
 /*products preview*/
 .products-preview{
-  margin: 40px 140px;
+  margin-top: 20px;
+  width: 1120px;
   h2{
     font-family: 'Novecento Sans Web';
     font-style: normal;
@@ -60,7 +70,8 @@
 
 /*journal preview*/
 .journal-preview{
-  margin: 40px 140px;
+  margin-top: 20px;
+  width: 1120px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 25% 75%;
@@ -105,13 +116,15 @@
   }
 }
 .adventures-preview-continer{
-  margin: 40px 140px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+  width: 1120px;
   h2{
     text-align:center;
     font-size: 40px;
     font-weight: 400;
     color: #2f1339;
-    margin-top: 70px;
+    margin-top: 50px;
     margin-bottom: 50px;
   }
 }
@@ -183,12 +196,16 @@
   }
 }
 /*about page*/
-.page-template{
+.page-template, .single-adventures{
   #masthead{
     position: absolute;
     background-color: transparent;
     color: white;
     border: none;
+    .site-title{
+      background: url(../../images/logos/inhabitent-logo-tent-white.svg) no-repeat;
+      background-size: 50px 33px;
+    }
     a{
       text-decoration: none;
       color: inherit;
@@ -197,13 +214,15 @@
   .content-area{
     color: #404040
   }
+
   .entry-content {
     h2{
       text-align: center;
       color: #2f1339;
-      font-size: 40px;
+      font-size: 34px;
     }
-    margin: 0px 180px;
+    max-width: 800px;
+    margin-bottom: 50px;
   }
 }
 /*404 page*/

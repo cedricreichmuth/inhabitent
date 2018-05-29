@@ -16,18 +16,22 @@ get_header(); ?>
 					'taxonomy' => 'product_type',
 					'hide-empty' => false
 				));?>
+				<div class="product-type-navigation">
 				<?php foreach($terms as $term) : ?>
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>/product_type/<?php echo $term->slug;?>/">
 						<h2><?php echo $term->name;?></h2>
 					</a>
-				<?php endforeach;?>
+					<?php endforeach;?>
+				</div>
 			</header>
 
-			<?php while ( have_posts() ) : the_post(); ?>
+			<div class="products-grid-container">
+				<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php get_template_part( 'template-parts/content', 'product' ); ?>
+					<?php get_template_part( 'template-parts/content', 'product' ); ?>
 
-			<?php endwhile; // End of the loop. ?>
+				<?php endwhile; // End of the loop. ?>
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

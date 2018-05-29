@@ -19,6 +19,7 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
+			<div class="products-grid-container">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -35,12 +36,7 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
-		<?php
-$queried_object = get_queried_object();
-echo "<p>";
-print_r( $queried_object );
-echo "</p>"
-?>
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -53,6 +53,7 @@ body {
 
 article,
 aside,
+.site-footer .footer-top aside p,
 details,
 figcaption,
 figure,
@@ -289,7 +290,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Novecento Sans Web";
   font-style: normal;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  letter-spacing: 2px; }
 
 /* Copy */
 p {
@@ -392,7 +394,184 @@ table {
   margin: 0 0 1.5rem;
   width: 100%; }
 
-.green-button, .white-button, .black-button {
+/*styling of the header*/
+#masthead.site-header {
+  border-bottom: 1px solid #e1e1e1;
+  position: fixed;
+  width: 100%;
+  font-family: 'Novecento Sans Web';
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 1;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.header-container {
+  width: 1120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.site-title, .site-title a {
+  background: url(../../images/logos/inhabitent-logo-tent.svg) no-repeat;
+  background-size: 50px 33px;
+  z-index: 2;
+  text-indent: 100%;
+  overflow: hidden;
+  width: 50px;
+  height: 33px; }
+
+/*nav bar in the header*/
+.fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: none; }
+  .fieldset label input {
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+    width: 0px; }
+  .fieldset .search-submit {
+    border: none;
+    background: transparent;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    outline: none;
+    padding-top: 3px;
+    padding-right: 40px; }
+    .fieldset .search-submit :hover {
+      color: #f0e4d1; }
+
+::-webkit-input-placeholder {
+  color: #808080; }
+
+:-ms-input-placeholder {
+  color: #808080; }
+
+::-ms-input-placeholder {
+  color: #808080; }
+
+::placeholder {
+  color: #808080; }
+
+#site-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.menu-menu-1-container li {
+  padding-right: 14px; }
+
+/*styling of the footer*/
+.site-footer {
+  background: url("../../images/backgrounds/dark-wood.png");
+  color: white; }
+  .site-footer .site-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .site-footer .footer-top {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 50px 0px; }
+    .site-footer .footer-top h2 {
+      color: #d99054;
+      font-size: 19px;
+      padding: 0px;
+      margin: 0px; }
+    .site-footer .footer-top a {
+      color: white; }
+      .site-footer .footer-top a:hover {
+        text-decoration: underline; }
+    .site-footer .footer-top i {
+      padding-right: 10px;
+      font-size: 20px; }
+    .site-footer .footer-top .widget-area {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: 50%;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+      margin: 0px;
+      padding: 0px; }
+    .site-footer .footer-top .footer-logo-container {
+      width: 50%;
+      padding-right: 40px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end; }
+      .site-footer .footer-top .footer-logo-container a {
+        width: 50%; }
+      .site-footer .footer-top .footer-logo-container img {
+        width: 100%; }
+    .site-footer .footer-top aside, .site-footer .footer-top aside p {
+      padding-bottom: 0px;
+      margin-bottom: 0px; }
+  .site-footer .footer-bottom {
+    width: 100%;
+    text-align: center;
+    font-family: "Novecento Sans Web";
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase; }
+
+/*sidebar*/
+#secondary i {
+  padding-right: 10px; }
+
+#secondary .widget_archive ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0; }
+
+/*buttons*/
+.green-button, .white-button, .black-button, .blog .black-btn, .single-post .black-btn, .category .black-btn, .tag .black-btn, .date .black-btn, .search-results .black-btn, .search-no-results .black-btn, .error404 .black-btn, .post-type-archive-adventures .black-btn, .single-post .form-submit input.submit, .page-template-default .wpcf7-form .wpcf7-submit {
   display: inline;
   background: #248a83;
   border: none;
@@ -409,9 +588,9 @@ table {
   text-shadow: none;
   -webkit-box-shadow: none;
           box-shadow: none; }
-  .green-button:hover, .white-button:hover, .black-button:hover {
+  .green-button:hover, .white-button:hover, .black-button:hover, .blog .black-btn:hover, .single-post .black-btn:hover, .category .black-btn:hover, .tag .black-btn:hover, .date .black-btn:hover, .search-results .black-btn:hover, .search-no-results .black-btn:hover, .error404 .black-btn:hover, .post-type-archive-adventures .black-btn:hover, .single-post .form-submit input.submit:hover, .page-template-default .wpcf7-form .wpcf7-submit:hover {
     background: #1a6d68; }
-  .green-button p, .white-button p, .black-button p {
+  .green-button p, .white-button p, .black-button p, .blog .black-btn p, .single-post .black-btn p, .category .black-btn p, .tag .black-btn p, .date .black-btn p, .search-results .black-btn p, .search-no-results .black-btn p, .error404 .black-btn p, .post-type-archive-adventures .black-btn p, .single-post .form-submit input.submit p, .page-template-default .wpcf7-form .wpcf7-submit p {
     margin: 0px; }
 
 .white-button {
@@ -420,11 +599,11 @@ table {
   .white-button:hover {
     border: none; }
 
-.black-button {
+.black-button, .blog .black-btn, .single-post .black-btn, .category .black-btn, .tag .black-btn, .date .black-btn, .search-results .black-btn, .search-no-results .black-btn, .error404 .black-btn, .post-type-archive-adventures .black-btn {
   background: white;
   border: 1px solid black;
   color: black; }
-  .black-button:hover {
+  .black-button:hover, .blog .black-btn:hover, .single-post .black-btn:hover, .category .black-btn:hover, .tag .black-btn:hover, .date .black-btn:hover, .search-results .black-btn:hover, .search-no-results .black-btn:hover, .error404 .black-btn:hover, .post-type-archive-adventures .black-btn:hover {
     border: none;
     color: white; }
 
@@ -689,80 +868,17 @@ a {
 .bypostauthor {
   display: block; }
 
-/*styling of the header*/
-#masthead.site-header {
-  border-bottom: 1px solid #e1e1e1;
-  position: fixed;
-  width: 100%;
-  font-family: 'Novecento Sans Web';
-  font-weight: normal;
-  font-style: normal;
-  text-transform: uppercase;
-  background-color: rgba(255, 255, 255, 0.85);
-  z-index: 1;
-  height: 60px;
+/*Journal page*/
+.blog .site-content, .single-post .site-content, .category .site-content, .tag .site-content, .date .site-content, .search-results .site-content, .search-no-results .site-content, .error404 .site-content, .post-type-archive-adventures .site-content {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  display: flex; }
 
-.site-branding {
-  padding-left: 40px; }
-
-.site-title, .site-title a {
-  background: url(../../images/logos/inhabitent-logo-tent.svg) no-repeat;
-  background-size: 50px 33px;
-  z-index: 2;
-  text-indent: 100%;
-  overflow: hidden;
-  width: 50px;
-  height: 33px; }
-
-/*nav bar in the header*/
-.fieldset {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: none; }
-  .fieldset label {
-    width: 0px; }
-    .fieldset label input {
-      background-color: transparent;
-      color: white;
-      border: none;
-      outline: none; }
-  .fieldset .search-submit {
-    border: none;
-    background: transparent;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-    outline: none;
-    padding-top: 3px;
-    padding-right: 40px; }
-    .fieldset .search-submit :hover {
-      color: #f0e4d1; }
-
-::-webkit-input-placeholder {
-  color: #f0e4d1; }
-
-:-ms-input-placeholder {
-  color: #f0e4d1; }
-
-::-ms-input-placeholder {
-  color: #f0e4d1; }
-
-::placeholder {
-  color: #f0e4d1; }
-
-#site-navigation {
+.blog .flex-container, .single-post .flex-container, .category .flex-container, .tag .flex-container, .date .flex-container, .search-results .flex-container, .search-no-results .flex-container, .error404 .flex-container, .post-type-archive-adventures .flex-container {
+  width: 1120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -770,37 +886,24 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-
-.menu-menu-1-container li {
-  padding-right: 14px; }
-
-/*Journal page*/
-.blog .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-right: auto;
-  width: 1120px;
   padding-top: 60px; }
 
-.blog #primary.content-area {
+.blog #primary.content-area, .single-post #primary.content-area, .category #primary.content-area, .tag #primary.content-area, .date #primary.content-area, .search-results #primary.content-area, .search-no-results #primary.content-area, .error404 #primary.content-area, .post-type-archive-adventures #primary.content-area {
   width: 73%;
   padding-right: 5%;
   padding-top: 5%;
   border-right: 1px solid #e1e1e1;
-  margin-left: 5px; }
+  margin-left: 5px;
+  margin-bottom: 70px; }
 
-.blog header.entry-header {
+.blog .widget-area, .single-post .widget-area, .category .widget-area, .tag .widget-area, .date .widget-area, .search-results .widget-area, .search-no-results .widget-area, .error404 .widget-area, .post-type-archive-adventures .widget-area {
+  padding-top: 30px; }
+
+.blog .entry-header, .single-post .entry-header, .category .entry-header, .tag .entry-header, .date .entry-header, .search-results .entry-header, .search-no-results .entry-header, .error404 .entry-header, .post-type-archive-adventures .entry-header {
   position: relative;
   line-height: 1; }
 
-.blog .blog {
+.blog .blog .site-content, .blog .single-post .site-content, .blog .category .site-content, .blog .tag .site-content, .blog .search-results .site-content, .blog .search-no-results .site-content, .blog .error404 .site-content, .blog .post-type-archive-adventures .site-content, .single-post .blog .site-content, .single-post .single-post .site-content, .single-post .category .site-content, .single-post .tag .site-content, .single-post .search-results .site-content, .single-post .search-no-results .site-content, .single-post .error404 .site-content, .single-post .post-type-archive-adventures .site-content, .category .blog .site-content, .category .single-post .site-content, .category .category .site-content, .category .tag .site-content, .category .search-results .site-content, .category .search-no-results .site-content, .category .error404 .site-content, .category .post-type-archive-adventures .site-content, .tag .blog .site-content, .tag .single-post .site-content, .tag .category .site-content, .tag .tag .site-content, .tag .search-results .site-content, .tag .search-no-results .site-content, .tag .error404 .site-content, .tag .post-type-archive-adventures .site-content, .date .blog .site-content, .date .single-post .site-content, .date .category .site-content, .date .tag .site-content, .date .search-results .site-content, .date .search-no-results .site-content, .date .error404 .site-content, .date .post-type-archive-adventures .site-content, .search-results .blog .site-content, .search-results .single-post .site-content, .search-results .category .site-content, .search-results .tag .site-content, .search-results .search-results .site-content, .search-results .search-no-results .site-content, .search-results .error404 .site-content, .search-results .post-type-archive-adventures .site-content, .search-no-results .blog .site-content, .search-no-results .single-post .site-content, .search-no-results .category .site-content, .search-no-results .tag .site-content, .search-no-results .search-results .site-content, .search-no-results .search-no-results .site-content, .search-no-results .error404 .site-content, .search-no-results .post-type-archive-adventures .site-content, .error404 .blog .site-content, .error404 .single-post .site-content, .error404 .category .site-content, .error404 .tag .site-content, .error404 .search-results .site-content, .error404 .search-no-results .site-content, .error404 .error404 .site-content, .error404 .post-type-archive-adventures .site-content, .post-type-archive-adventures .blog .site-content, .post-type-archive-adventures .single-post .site-content, .post-type-archive-adventures .category .site-content, .post-type-archive-adventures .tag .site-content, .post-type-archive-adventures .search-results .site-content, .post-type-archive-adventures .search-no-results .site-content, .post-type-archive-adventures .error404 .site-content, .post-type-archive-adventures .post-type-archive-adventures .site-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -810,19 +913,24 @@ a {
           flex-direction: column;
   min-height: 100vh; }
 
-.blog .entry-header {
+.blog .entry-header, .single-post .entry-header, .category .entry-header, .tag .entry-header, .date .entry-header, .search-results .entry-header, .search-no-results .entry-header, .error404 .entry-header, .post-type-archive-adventures .entry-header {
   display: grid;
   grid-template: repeat(10, 10%)/repeat(10, 10%); }
 
-.blog .entry-header img {
+.blog .entry-header img, .single-post .entry-header img, .category .entry-header img, .tag .entry-header img, .date .entry-header img, .search-results .entry-header img, .search-no-results .entry-header img, .error404 .entry-header img, .post-type-archive-adventures .entry-header img {
   grid-column: 1/11;
   grid-row: 1/11; }
 
-.blog .entry-title {
+.blog .entry-title, .single-post .entry-title, .category .entry-title, .tag .entry-title, .date .entry-title, .search-results .entry-title, .search-no-results .entry-title, .error404 .entry-title, .post-type-archive-adventures .entry-title {
   grid-column: 1/7;
   grid-row: 1/3;
   font-size: 2.3rem;
   background-color: #248a83;
+  font-family: "Novecento Sans Web";
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 34px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -832,13 +940,14 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 8px; }
-  .blog .entry-title a {
+  padding: 12px;
+  line-height: 1.25; }
+  .blog .entry-title a, .single-post .entry-title a, .category .entry-title a, .tag .entry-title a, .date .entry-title a, .search-results .entry-title a, .search-no-results .entry-title a, .error404 .entry-title a, .post-type-archive-adventures .entry-title a {
     text-decoration: none;
     color: white; }
 
-.blog .entry-meta {
-  grid-column: 6/11;
+.blog .entry-meta, .single-post .entry-meta, .category .entry-meta, .tag .entry-meta, .date .entry-meta, .search-results .entry-meta, .search-no-results .entry-meta, .error404 .entry-meta, .post-type-archive-adventures .entry-meta {
+  grid-column: 5/11;
   grid-row: 10/10;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -849,13 +958,100 @@ a {
   background-color: #248a83;
   color: white;
   padding: 0px 10px;
-  border: 8px solid #248a83; }
+  border: 8px solid #248a83;
+  font-family: "Novecento Sans Web";
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase; }
+  .blog .entry-meta span time, .single-post .entry-meta span time, .category .entry-meta span time, .tag .entry-meta span time, .date .entry-meta span time, .search-results .entry-meta span time, .search-no-results .entry-meta span time, .error404 .entry-meta span time, .post-type-archive-adventures .entry-meta span time {
+    color: white; }
+  .blog .entry-meta a, .single-post .entry-meta a, .category .entry-meta a, .tag .entry-meta a, .date .entry-meta a, .search-results .entry-meta a, .search-no-results .entry-meta a, .error404 .entry-meta a, .post-type-archive-adventures .entry-meta a {
+    color: white; }
 
-/*styling of the footer*/
-.site-footer {
-  background: url("../../images/backgrounds/dark-wood.png");
-  color: white; }
-  .site-footer .site-info {
+.blog .BodyA, .single-post .BodyA, .category .BodyA, .tag .BodyA, .date .BodyA, .search-results .BodyA, .search-no-results .BodyA, .error404 .BodyA, .post-type-archive-adventures .BodyA {
+  line-height: 1.75 !important; }
+
+/*category & tag archive*/
+.category .page-header, .tag .page-header, .date .page-header, .search-results .page-header {
+  padding-bottom: 16px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #e1e1e1; }
+
+.category .page-title, .tag .page-title, .date .page-title, .search-results .page-title {
+  font-size: 38px;
+  margin: 0px; }
+
+/*single posts*/
+.single-post {
+  /*comments section*/
+  /*comment respond section*/ }
+  .single-post .entry-title {
+    color: white; }
+  .single-post .entry-footer span {
+    font-family: "Novecento Sans Web";
+    font-style: normal;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-right: 20px; }
+  .single-post .entry-footer .archive-links {
+    margin-bottom: 25px; }
+  .single-post .entry-footer .social-buttons i {
+    padding-right: 8px; }
+  .single-post .comments-title {
+    font-size: 34px;
+    color: #2f1339; }
+  .single-post .comment-list {
+    margin: 0px;
+    padding: 0px; }
+    .single-post .comment-list #div-comment-2 {
+      border: 0px; }
+  .single-post .comment-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-top: 1px solid #e1e1e1;
+    padding: 20px 0px; }
+  .single-post .comment-author-avatar {
+    display: inline;
+    padding-right: 30px; }
+  .single-post .avatar {
+    border-radius: 50%; }
+  .single-post .comment-content {
+    display: inline; }
+  .single-post .comment-author cite {
+    font-style: normal;
+    font-weight: bold; }
+  .single-post time {
+    color: gray; }
+  .single-post .comment-reply-title {
+    font-size: 29px; }
+  .single-post .comment-form label {
+    font-family: "Novecento Sans Web";
+    font-style: normal;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #2f1339;
+    font-size: 17px; }
+  .single-post .comment-form textarea, .single-post .comment-form input {
+    margin-top: 10px;
+    color: #666;
+    background-color: #f4f4f4;
+    border: 1px solid #e1e1e1; }
+  .single-post .comment-form-author, .single-post .comment-form-email {
+    width: 49%;
+    padding-left: 1%;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .single-post .comment-form-author label, .single-post .comment-form-email label {
+      width: 100%; }
+    .single-post .comment-form-author input, .single-post .comment-form-email input {
+      width: 100%; }
+  .single-post .comment-form-url {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -863,9 +1059,63 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; }
+  .single-post .comment-form-cookies-consent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .single-post .form-submit input.submit {
+    background: #248a83;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    font-family: Novecento Sans Web,sans-serif;
+    font-size: 14.4px;
+    font-size: .9rem;
+    line-height: 1;
+    padding: .75rem 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase; }
 
-.footer-top {
-  width: 100%;
+/*shop page*/
+.post-type-archive-products .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.post-type-archive-products .about-content-area {
+  padding-top: 60px;
+  width: 1120px; }
+
+.post-type-archive-products .site-main {
+  width: 100%; }
+
+.post-type-archive-products .page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+  border-bottom: 1px dashed #c8c8c8;
+  width: 100%; }
+  .post-type-archive-products .page-header h1 {
+    font-size: 39px;
+    margin: 0px; }
+
+.product-type-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -873,23 +1123,313 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 40px 0px; }
-  .footer-top h3 {
-    color: #d99054; }
-  .footer-top .contact {
-    width: 25%;
-    padding-left: 5px; }
-  .footer-top .hours {
-    width: 25%; }
-  .footer-top .footer-logo-container {
-    width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .product-type-navigation h2 {
+    padding: 0px 25px;
+    font-size: 20px;
+    font-weight: normal; }
+
+.products-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding-bottom: 90px;
+  padding-top: 50px; }
+
+.products {
+  border: 1px solid #e1e1e1; }
+  .products img {
+    width: 100%;
+    height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-bottom: 5px solid #e1e1e1; }
+  .products .product-info {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; }
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 10px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .products .product-info p {
+      margin: 0px;
+      background-color: white;
+      display: inline; }
+    .products .product-info span {
+      background-color: white; }
+    .products .product-info p::before {
+      content: "............................................................";
+      width: 0;
+      white-space: nowrap;
+      float: left;
+      z-index: -1;
+      position: absolute; }
 
-.footer-bottom {
-  width: 100%;
-  text-align: center; }
+.hentry {
+  margin: 0px; }
+
+/*product type shop page*/
+.tax-product_type .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.tax-product_type .content-area {
+  padding-top: 60px;
+  width: 1120px; }
+
+.tax-product_type .page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0px;
+  border-bottom: 1px dashed #c8c8c8;
+  width: 100%; }
+  .tax-product_type .page-header h1 {
+    font-size: 39px;
+    margin: 0px; }
+
+/*single products*/
+.single-products .site-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 60px; }
+  .single-products .site-main article {
+    width: 1120px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 50px 0px;
+    border: none;
+    margin-bottom: 100px; }
+  .single-products .site-main .product-image-container {
+    width: 540px;
+    height: 300px; }
+    .single-products .site-main .product-image-container img {
+      border: none;
+      -o-object-fit: cover;
+         object-fit: cover;
+      height: 300px; }
+  .single-products .site-main .product-content-container {
+    width: 540px; }
+    .single-products .site-main .product-content-container h1 {
+      color: #d99054;
+      font-size: 38px;
+      margin: 0px; }
+    .single-products .site-main .product-content-container .price {
+      font-family: "Novecento Sans Web";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 29px;
+      margin: 0px; }
+    .single-products .site-main .product-content-container span {
+      line-height: 1.75; }
+    .single-products .site-main .product-content-container .social-buttons i {
+      padding-right: 10px; }
+
+/*find us page*/
+.page-template-default .site-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.page-template-default .flex-container {
+  width: 1120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.page-template-default .content-area {
+  width: 73%;
+  margin-top: 5%;
+  margin-right: 5%; }
+
+.page-template-default .widget-area {
+  padding-top: 5%;
+  margin-top: 60px;
+  border-left: 1px solid #e1e1e1; }
+
+.page-template-default .post-17 {
+  margin-top: 60px; }
+
+.page-template-default .entry-title {
+  font-size: 38px; }
+
+.page-template-default iframe {
+  width: 760px;
+  height: 300px; }
+
+.page-template-default .entry-content h2 {
+  font-size: 34px;
+  color: #2f1339; }
+
+.page-template-default .wpcf7-form label {
+  font-family: "Novecento Sans Web";
+  font-style: normal;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #2f1339;
+  font-size: 17px; }
+  .page-template-default .wpcf7-form label span {
+    color: #d99054; }
+
+.page-template-default .wpcf7-form textarea, .page-template-default .wpcf7-form input {
+  margin-top: 10px;
+  color: #666;
+  background-color: #f4f4f4;
+  border: 1px solid #e1e1e1; }
+
+.page-template-default .wpcf7-form .wpcf7-submit {
+  background: #248a83;
+  border: none;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  font-family: Novecento Sans Web,sans-serif;
+  font-size: 14.4px;
+  font-size: .9rem;
+  line-height: 1;
+  padding: .75rem 1.5rem;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+/*search results page*/
+.search-results article {
+  border: none; }
+
+.search-results .entry-header {
+  display: block; }
+
+.search-results .entry-title {
+  background: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 30px 0px 20px 0px; }
+  .search-results .entry-title a {
+    color: #248A83;
+    text-align: left; }
+  .search-results .entry-title p {
+    text-transform: none; }
+
+/*404 page*/
+.error404 #primary.content-area {
+  padding-top: 0; }
+
+.error404 .page-title {
+  font-size: 38px; }
+
+.error404 h2 {
+  color: #2f1339; }
+
+.error404 .error-404 .search-submit {
+  display: none; }
+
+.error404 .error-404 ::-webkit-input-placeholder {
+  color: #808080;
+  text-transform: lowercase; }
+
+.error404 .error-404 :-ms-input-placeholder {
+  color: #808080;
+  text-transform: lowercase; }
+
+.error404 .error-404 ::-ms-input-placeholder {
+  color: #808080;
+  text-transform: lowercase; }
+
+.error404 .error-404 ::placeholder {
+  color: #808080;
+  text-transform: lowercase; }
+
+.error404 .error-404 .search-form.fieldset label {
+  width: 200px; }
+  .error404 .error-404 .search-form.fieldset label .search-field {
+    border: 1px solid #e1e1e1;
+    background-color: #f4f4f4;
+    width: 200px; }
+
+.error404 .widget ul {
+  list-style: none;
+  padding-left: 0px;
+  margin-left: 0px; }
+
+/*archive adventures*/
+.post-type-archive-adventures .about-content-area {
+  width: 100%; }
+  .post-type-archive-adventures .about-content-area .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px 20px;
+    margin-bottom: 50px; }
+  .post-type-archive-adventures .about-content-area .page-header {
+    margin-bottom: 40px;
+    border-bottom: 1px dashed #c8c8c8; }
+    .post-type-archive-adventures .about-content-area .page-header h1 {
+      text-align: center;
+      font-size: 38px; }
+  .post-type-archive-adventures .about-content-area .adventure-preview-image {
+    height: 550px;
+    width: 100%;
+    background-position: center; }
+  .post-type-archive-adventures .about-content-area h2 {
+    font-family: "Merriweather";
+    font-style: normal;
+    font-weight: 400;
+    color: white;
+    margin-bottom: 50px;
+    font-size: 48px;
+    text-transform: none; }
+    .post-type-archive-adventures .about-content-area h2:hover {
+      color: #f0e4d1; }
+  .post-type-archive-adventures .about-content-area .title-container {
+    padding: 50px 25px; }
+
+/*single adventures*/
+.single-adventures .adventure-content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .single-adventures .adventure-content-container h1, .single-adventures .adventure-content-container p, .single-adventures .adventure-content-container span {
+    width: 800px;
+    line-height: 1.75; }
 
 /*--------------------------------------------------------------
 # Media
@@ -955,9 +1495,25 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+.page-template .site-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.page-template .entry-header {
+  width: 100%; }
+
 /*products preview*/
 .products-preview {
-  margin: 40px 140px;
+  margin-top: 20px;
+  width: 1120px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 25% 75%;
@@ -993,7 +1549,7 @@ object {
   .products-preview img {
     height: 70px;
     width: 70px; }
-  .products-preview .green-button, .products-preview .white-button, .products-preview .black-button {
+  .products-preview .green-button, .products-preview .white-button, .products-preview .black-button, .products-preview .blog .black-btn, .blog .products-preview .black-btn, .products-preview .single-post .black-btn, .single-post .products-preview .black-btn, .products-preview .category .black-btn, .category .products-preview .black-btn, .products-preview .tag .black-btn, .tag .products-preview .black-btn, .products-preview .date .black-btn, .date .products-preview .black-btn, .products-preview .search-results .black-btn, .search-results .products-preview .black-btn, .products-preview .search-no-results .black-btn, .search-no-results .products-preview .black-btn, .products-preview .error404 .black-btn, .error404 .products-preview .black-btn, .products-preview .post-type-archive-adventures .black-btn, .post-type-archive-adventures .products-preview .black-btn, .products-preview .single-post .form-submit input.submit, .single-post .form-submit .products-preview input.submit, .products-preview .page-template-default .wpcf7-form .wpcf7-submit, .page-template-default .wpcf7-form .products-preview .wpcf7-submit {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -1001,7 +1557,8 @@ object {
 
 /*journal preview*/
 .journal-preview {
-  margin: 40px 140px;
+  margin-top: 20px;
+  width: 1120px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 25% 75%;
@@ -1032,20 +1589,22 @@ object {
       line-height: 1.25;
       letter-spacing: 2px;
       font-size: 1.3em; }
-    .journal-preview .content-wrapper .black-button {
+    .journal-preview .content-wrapper .black-button, .journal-preview .content-wrapper .blog .black-btn, .blog .journal-preview .content-wrapper .black-btn, .journal-preview .content-wrapper .single-post .black-btn, .single-post .journal-preview .content-wrapper .black-btn, .journal-preview .content-wrapper .category .black-btn, .category .journal-preview .content-wrapper .black-btn, .journal-preview .content-wrapper .tag .black-btn, .tag .journal-preview .content-wrapper .black-btn, .journal-preview .content-wrapper .date .black-btn, .date .journal-preview .content-wrapper .black-btn, .journal-preview .content-wrapper .search-results .black-btn, .search-results .journal-preview .content-wrapper .black-btn, .journal-preview .content-wrapper .search-no-results .black-btn, .search-no-results .journal-preview .content-wrapper .black-btn, .journal-preview .content-wrapper .error404 .black-btn, .error404 .journal-preview .content-wrapper .black-btn, .journal-preview .content-wrapper .post-type-archive-adventures .black-btn, .post-type-archive-adventures .journal-preview .content-wrapper .black-btn {
       display: -webkit-inline-box;
       display: -ms-inline-flexbox;
       display: inline-flex;
       margin-top: 13px; }
 
 .adventures-preview-continer {
-  margin: 40px 140px; }
+  margin-top: 20px;
+  margin-bottom: 60px;
+  width: 1120px; }
   .adventures-preview-continer h2 {
     text-align: center;
     font-size: 40px;
     font-weight: 400;
     color: #2f1339;
-    margin-top: 70px;
+    margin-top: 50px;
     margin-bottom: 50px; }
 
 .adventures-preview {
@@ -1103,23 +1662,27 @@ object {
       margin-left: 24px; }
 
 /*about page*/
-.page-template #masthead {
+.page-template #masthead, .single-adventures #masthead {
   position: absolute;
   background-color: transparent;
   color: white;
   border: none; }
-  .page-template #masthead a {
+  .page-template #masthead .site-title, .page-template #masthead .site-title a, .site-title .page-template #masthead a, .single-adventures #masthead .site-title, .single-adventures #masthead .site-title a, .site-title .single-adventures #masthead a {
+    background: url(../../images/logos/inhabitent-logo-tent-white.svg) no-repeat;
+    background-size: 50px 33px; }
+  .page-template #masthead a, .single-adventures #masthead a {
     text-decoration: none;
     color: inherit; }
 
-.page-template .content-area {
+.page-template .content-area, .single-adventures .content-area {
   color: #404040; }
 
-.page-template .entry-content {
-  margin: 0px 180px; }
-  .page-template .entry-content h2 {
+.page-template .entry-content, .single-adventures .entry-content {
+  max-width: 800px;
+  margin-bottom: 50px; }
+  .page-template .entry-content h2, .single-adventures .entry-content h2 {
     text-align: center;
     color: #2f1339;
-    font-size: 40px; }
+    font-size: 34px; }
 
 /*404 page*/
