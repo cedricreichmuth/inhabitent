@@ -19,12 +19,12 @@ A Wordpress theme for an outdoor-store featuring custom posttypes, custom taxono
 
 ## Screenshots
 
-![alt text](images/screenshots/front-page.png)
+![alt text](themes/inhabitent/images/screenshots/front-page.png)
 
-![alt text](images/screenshots/shop-page.png)
+![alt text](themes/inhabitent/images/screenshots/shop-page.png)
 
-![alt text](images/screenshots/journal-page.png)
+![alt text](themes/inhabitent/images/screenshots/journal-page.png)
 
-![alt text](images/screenshots/about-page.png)
+![alt text](themes/inhabitent/images/screenshots/about-page.png)
 
-![alt text](images/screenshots/findus-page.png)
+![alt text](themes/inhabitent/images/screenshots/findus-page.png)
