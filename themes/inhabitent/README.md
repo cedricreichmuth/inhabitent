@@ -1,3 +1,30 @@
-Project 4: inhabitent
-Technologies: WordPress
-Personal Learnings: Be more concentrated to avoid wasting time on unnecessary mistakes. Think before styling, a lot of work can be avoided if reusable classes are created.
+# Project Title
+
+Inhabitent
+
+## Description
+
+A project I completed during the Web Developer program at RED Academy
+A Wordpress theme for an outdoor-store featuring custom posttypes, custom taxonomies and archives.
+
+## Built With
+
+* HTML5
+* CSS3
+* jQuery
+* Wordpress
+* PHP
+* MySQL
+* Apache
+
+## Screenshots
+
+![alt text](images/screenshots/front-page.png)
+
+![alt text](images/screenshots/shop-page.png)
+
+![alt text](images/screenshots/journal-page.png)
+
+![alt text](images/screenshots/about-page.png)
+
+![alt text](images/screenshots/findus-page.png)

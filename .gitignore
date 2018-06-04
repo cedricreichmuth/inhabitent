@@ -4,6 +4,7 @@
 !plugins/
 !themes/
 !uploads/
+uploads/wp-migrate-db
 !README.md
 # Ignore everything in "plugins" except certain plugins. #
 plugins/*
