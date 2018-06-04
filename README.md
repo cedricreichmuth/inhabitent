@@ -4,7 +4,7 @@ Inhabitent
 
 ## Description
 
-A project I completed during the Web Developer program at RED Academy
+A project I completed during the Web Developer program at RED Academy  
 A Wordpress theme for an outdoor-store featuring custom posttypes, custom taxonomies and archives.
 
 ## Built With
